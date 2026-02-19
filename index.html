@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Campus Assist • Student Help Chatbot</title>
+  <meta name="description" content="A student support chatbot site for answering common university questions." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+  <!-- Mobile top bar -->
+  <header class="topbar" aria-label="Top navigation">
+    <button class="icon-btn" id="menuBtn" aria-expanded="false" aria-controls="sidebar" aria-label="Open menu">
+      ☰
+    </button>
+    <div class="topbar-title">Campus Assist</div>
+    <a class="topbar-cta" href="#chat">Chat</a>
+  </header>
+
+  <!-- Sidebar -->
+  <aside class="sidebar" id="sidebar" aria-label="Sidebar navigation">
+    <div class="brand">
+      <img class="brand-logo" src="assets/img/carleton-logo.png" alt="Carleton University logo" />
+      <div class="brand-text">
+        <div class="brand-title">Campus Assist</div>
+        <div class="brand-subtitle">Student Doubts • Fast Answers</div>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Primary">
+      <a class="nav-link is-active" href="#welcome">Welcome</a>
+      <a class="nav-link" href="#who">Who we are</a>
+      <a class="nav-link" href="#what">What we do</a>
+      <a class="nav-link" href="#chat">Chatbot</a>
+      <a class="nav-link" href="#faq">FAQ</a>
+      <a class="nav-link" href="#contact">Get in touch</a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <small>© <span id="year"></span> Campus Assist</small>
+    </div>
+  </aside>
+
+  <!-- Backdrop for mobile -->
+  <div class="backdrop" id="backdrop" hidden></div>
+
+  <!-- Main content (scroll container) -->
+  <main class="main" id="mainScroll">
+    <!-- Welcome -->
+    <section class="section hero" id="welcome">
+      <div class="container">
+        <h1>Campus Assist</h1>
+        <p class="lead">
+          A student support chatbot that helps answer common questions about courses, services, deadlines,
+          and campus resources—quickly and clearly.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn" href="#chat">Try the chatbot</a>
+          <a class="btn btn-ghost" href="#who">Learn more</a>
+        </div>
+
+        <div class="chips">
+          <span class="chip">Fast answers</span>
+          <span class="chip">Guidance</span>
+          <span class="chip">Links</span>
+          <span class="chip">Department contacts</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who -->
+    <section class="section" id="who">
+      <div class="container">
+        <h2>Who we are</h2>
+        <p class="lead">
+          We’re a student team building one place to ask quick questions without bouncing between departments.
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Mission</h3>
+            <p>Reduce friction for students who need fast, reliable direction for campus services.</p>
+          </article>
+
+          <article class="card">
+            <h3>Principles</h3>
+            <ul class="list">
+              <li>Clear answers with sources and nesssary steps </li>
+              <li>best opitions </li>
+              <li>Escalation to department support if nesssary</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <h3>Scope</h3>
+            <p>General student FAQs, service navigation, and common process guidance for the demo.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- What -->
+    <section class="section" id="what">
+      <div class="container">
+        <h2>What we do</h2>
+        <p class="lead">
+          Ask a question → get an answer → get next steps (links, actions, and the right office to contact).
+        </p>
+
+        <div class="grid">
+          <article class="card">
+            <h3>Answer questions</h3>
+            <p>Courses, forms, deadlines, services, and common “where do I go?” issues.</p>
+          </article>
+
+          <article class="card">
+            <h3>Route correctly</h3>
+            <p>Points to the correct support page/office and what info you need before contacting them.</p>
+          </article>
+
+          <article class="card">
+            <h3>Escalate when needed</h3>
+            <p>If the bot isn’t confident, it suggests the correct human support path.</p>
+          </article>
+        </div>
+
+        <div class="note">
+          <strong>Tip:</strong>  put somthing thats the students should care about while asking questions here !!.
+        </div>
+      </div>
+    </section>
+
+    <!-- Chat -->
+    <section class="section" id="chat">
+      <div class="container">
+        <h2>Chatbot</h2>
+        <p class="lead">
+          This is a demo UI. Later you can connect it later. I just put it here for a text box ...
+        </p>
+
+        <div class="chat-shell" role="region" aria-label="Chat interface">
+          <div class="chat-header">
+            <div class="dot" aria-hidden="true"></div>
+            <div>
+              <div class="chat-title">Campus Assist</div>
+              <div class="chat-subtitle">Online • Demo mode</div>
+            </div>
+          </div>
+
+          <div class="chat-messages" id="chatMessages" aria-live="polite" aria-relevant="additions">
+            <div class="msg bot">
+              <div class="bubble">
+                Hi! Ask me something like: “How do I find tutoring?” or “Where is the library?”
+              </div>
+            </div>
+          </div>
+
+          <form class="chat-input" id="chatForm">
+            <label class="sr-only" for="chatText">Your message</label>
+            <input id="chatText" type="text" placeholder="Type your question…" autocomplete="off" />
+            <button class="btn" type="submit">Send</button>
+          </form>
+        </div>
+
+        <div class="embed-hint">
+          <details>
+            <summary>Add our live chatbot here in the code pls.. ?</summary>
+            <p>Replace the demo UI:</p>
+            <pre class="code"><code>&lt;iframe
+  title="Chatbot"
+  src="https://YOUR-CHATBOT-URL"
+  style="width:100%; height:650px; border:0; border-radius:16px;"
+&gt;&lt;/iframe&gt;</code></pre>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq">
+      <div class="container">
+        <h2>FAQ</h2>
+
+        <div class="faq">
+          <details class="faq-item" open>
+            <summary>Is this official university advice?</summary>
+            <p>No — it’s a student project demo. The bot should point to official pages/offices when possible.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>What happens if the bot is wrong?</summary>
+            <p>It should show confidence and recommend escalation paths when uncertain.</p>
+          </details>
+
+          <details class="faq-item">
+            <summary>Does it store my data?</summary>
+            <p>disclose whatever data we are saving here //</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2>Get in touch</h2>
+        <p class="lead">Send feedback or report an issue with the demo. NOT FINISHED !!</p>
+
+        <form class="contact" id="contactForm">
+          <div class="grid-2">
+            <div>
+              <label for="name">Name</label>
+              <input id="name" type="text" placeholder="Your name" />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="you@email.com" />
+            </div>
+          </div>
+
+          <label for="message">Message</label>
+          <textarea id="message" rows="5" placeholder="Write your feedback…"></textarea>
+
+          <div class="cta-row">
+            <button class="btn" type="submit">Send message</button>
+            <button class="btn btn-ghost" type="reset">Reset</button>
+          </div>
+
+          <p class="tiny" id="contactNote" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- Carleton-style footer -->
+    <footer class="cu-footer" aria-label="Footer">
+      <div class="cu-footer-inner">
+        <p class="cu-ack">
+          Carleton University acknowledges the location of its campus on the traditional, unceded territories of the
+          Algonquin Anishinàbeg nation.
+        </p>
+
+        <div class="cu-footer-grid">
+          <div class="cu-col">
+            <h4>Admissions</h4>
+            <a href="https://admissions.carleton.ca/" target="_blank" rel="noreferrer">Undergraduate</a>
+            <a href="https://graduate.carleton.ca/" target="_blank" rel="noreferrer">Graduate</a>
+            <a href="https://admissions.carleton.ca/international/" target="_blank" rel="noreferrer">International</a>
+          </div>
+
+          <div class="cu-col">
+            <h4>Academics</h4>
+            <a href="https://calendar.carleton.ca/" target="_blank" rel="noreferrer">Calendars</a>
+            <a href="https://brightspace.carleton.ca/" target="_blank" rel="noreferrer">Brightspace</a>
+            <a href="https://library.carleton.ca/" target="_blank" rel="noreferrer">Library</a>
+          </div>
+
+          <div class="cu-col">
+            <h4>Students</h4>
+            <a href="https://carleton.ca/registrar/" target="_blank" rel="noreferrer">Registrar’s Office</a>
+            <a href="https://carleton.ca/its/" target="_blank" rel="noreferrer">ITS</a>
+            <a href="https://carleton.ca/studentaffairs/" target="_blank" rel="noreferrer">Student Affairs</a>
+          </div>
+
+          <div class="cu-col">
+            <h4>Campus</h4>
+            <a href="https://carleton.ca/campus/map/" target="_blank" rel="noreferrer">Campus Map</a>
+            <a href="https://events.carleton.ca/" target="_blank" rel="noreferrer">Events</a>
+            <a href="https://carleton.ca/safety/" target="_blank" rel="noreferrer">Safety</a>
+          </div>
+
+          <div class="cu-col">
+            <h4>Ravens</h4>
+            <a href="https://athletics.carleton.ca/" target="_blank" rel="noreferrer">Athletics & Recreation</a>
+            <a href="https://goravens.ca/" target="_blank" rel="noreferrer">Go Ravens</a>
+            <a href="https://futurefunder.carleton.ca/" target="_blank" rel="noreferrer">Give to Carleton</a>
+          </div>
+        </div>
+
+        <div class="cu-footer-bottom">
+          <div class="cu-footer-left">
+            <img class="cu-footer-logo" src="assets/img/carleton-logo.png" alt="Carleton University logo" />
+            <div class="cu-contact">
+              <div>1125 Colonel By Drive, Ottawa, ON, K1S 5B6, Canada</div>
+              <div class="cu-links">
+                <a href="https://carleton.ca/privacy/" target="_blank" rel="noreferrer">Privacy Policy</a>
+                <span aria-hidden="true">•</span>
+                <a href="https://carleton.ca/accessibility/" target="_blank" rel="noreferrer">Accessibility</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="cu-social" aria-label="Social links">
+            <a href="https://www.facebook.com/carletonu/" target="_blank" rel="noreferrer">Facebook</a>
+            <a href="https://www.instagram.com/carletonu/" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://twitter.com/carletonu" target="_blank" rel="noreferrer">X</a>
+            <a href="https://www.youtube.com/user/carletonu" target="_blank" rel="noreferrer">YouTube</a>
+            <a href="https://www.linkedin.com/school/carleton-university/" target="_blank" rel="noreferrer">LinkedIn</a>
+          </div>
+        </div>
+
+        <div class="cu-copyright">
+          <small>© <span id="yearFooter"></span> Campus Assist • Student project demo</small>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
