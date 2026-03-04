@@ -124,16 +124,16 @@
     addMsg("user", text);
     chatText.value = "";
 
-    window.setTimeout(() => addMsg("bot", demoReply(text)), 250);
-  });
+    try {
+    const res = await fetch("http://127.0.0.1:8000/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: text })
+    });
 
-  // Contact demo
-  const contactForm = document.getElementById("contactForm");
-  const contactNote = document.getElementById("contactNote");
-  contactForm?.addEventListener("submit", (e) => {
-    e.preventDefault();
-    if (contactNote) {
-      contactNote.textContent = "Thanks! This is a demo form (no backend connected yet).";
-    }
-  });
-})();
+    const data = await res.json();
+    addMsg("bot", data.answer || "No answer returned.");
+  } catch (err) {
+    addMsg("bot", "Backend not running. Start it on port 8000.");
+  }
+});
