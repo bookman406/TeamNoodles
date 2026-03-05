@@ -73,3 +73,5 @@ Students should always refer to official Carleton University resources or contac
 Team Noodles
 IRM3004/OSS3009 Group Project
 Carleton University
+<img width="1223" height="880" alt="Screenshot 2026-03-05 at 12 46 09 PM" src="https://github.com/user-attachments/assets/26b8aa01-ede6-4dba-8285-e6e131ee8622" />
+
