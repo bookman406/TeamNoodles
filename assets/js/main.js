@@ -108,7 +108,7 @@
     chatText.value = "";
 
     try {
-    const res = await fetch("http://127.0.0.1:8001/docs", {
+    const res = await fetch("http://127.0.0.1:8001/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message: text })
@@ -120,6 +120,7 @@
     addMsg("bot", "Backend not running. Start it on port 8000.");
   }
 });
+
 
 
 
