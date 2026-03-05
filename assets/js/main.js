@@ -98,24 +98,7 @@
     chatMessages.scrollTop = chatMessages.scrollHeight;
   }
 
-  function demoReply(userText) {
-    const t = userText.toLowerCase();
-
-    if (t.includes("library")) {
-      return "Library: tell me if you need hours, study rooms, printing, or finding books and I’ll guide you.";
-    }
-    if (t.includes("tutor") || t.includes("tutoring")) {
-      return "Tutoring: tell me your course code (e.g., COMP/STAT/MATH) and I’ll suggest the best support path.";
-    }
-    if (t.includes("deadline") || t.includes("exam") || t.includes("deferral")) {
-      return "Deadlines/exams: share the course code + what deadline (withdrawal, deferral, assignment) and I’ll point you to the right page/office.";
-    }
-    if (t.includes("it") || t.includes("wifi") || t.includes("password")) {
-      return "IT help: I can guide you for Wi-Fi, passwords, Brightspace access, or account issues. What’s the problem?";
-    }
-    return "I can help. Choose an area: courses, registration, campus services, IT support, or directions.";
-  }
-
+  
   chatForm?.addEventListener("submit", (e) => {
     e.preventDefault();
     const text = (chatText?.value || "").trim();
@@ -137,4 +120,5 @@
     addMsg("bot", "Backend not running. Start it on port 8000.");
   }
 });
+
 
