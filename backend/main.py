@@ -58,8 +58,8 @@ You may begin to register at the specified date/time.
 If your Student Status or Academic Standing prevents registration,
 please contact the Registrar’s Office or Graduate Studies.
 
-Holds may prevent registration. If you have holds,
-click “View Holds” to see details and contact the originator.
+Holds may prevent registration. If you have holds, click “View Holds”
+to see details and contact the originator.
 
 Once everything is confirmed, you may move to the next step."""}
 
