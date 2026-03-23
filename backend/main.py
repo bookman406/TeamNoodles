@@ -10,7 +10,6 @@ app = FastAPI()
 origins = [
     "http://localhost:5173",  # Vite default port
     "http://localhost:3000",  # React default port
-    "http://localhost:5500",
     "http://localhost:8001"   # port used for this project
 ]
 
@@ -59,8 +58,8 @@ You may begin to register at the specified date/time.
 If your Student Status or Academic Standing prevents registration,
 please contact the Registrar’s Office or Graduate Studies.
 
-Holds may prevent registration. If you have holds,
-click “View Holds” to see details and contact the originator.
+Holds may prevent registration. If you have holds, click “View Holds”
+to see details and contact the originator.
 
 Once everything is confirmed, you may move to the next step."""}
 
