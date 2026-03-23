@@ -1,4 +1,4 @@
-(function () {
+//(function () {
   const navLinks = Array.from(document.querySelectorAll(".nav-link"));
   const sections = Array.from(document.querySelectorAll("section.section"));
   const yearEl = document.getElementById("year");
@@ -99,7 +99,7 @@
   }
 
   
-  chatForm?.addEventListener("submit", (e) => {
+  chatForm?.addEventListener("submit", async(e) => {
     e.preventDefault();
     const text = (chatText?.value || "").trim();
     if (!text) return;
@@ -119,8 +119,4 @@
   } catch (err) {
     addMsg("bot", "Backend not running. Start it on port 8000.");
   }
-});
-
-
-
-
+  })
