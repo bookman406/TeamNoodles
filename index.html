@@ -33,8 +33,8 @@
       <a class="nav-link" href="#who">Who we are</a>
       <a class="nav-link" href="#what">What we do</a>
       <a class="nav-link" href="#chat">Chatbot</a>
-      <a class="nav-link" href="#faq">FAQ</a>
-      <a class="nav-link" href="#contact">Get in touch</a>
+      <a class="nav-link" href="#faq">Quick Links</a>
+      <a class="nav-link" href="#contact">More Help</a>
     </nav>
 
     <div class="sidebar-footer">
@@ -47,28 +47,43 @@
 
   <!-- Main content (scroll container) -->
   <main class="main" id="mainScroll">
-    <!-- Welcome -->
-    <section class="section hero" id="welcome">
-      <div class="container">
-        <h1>Campus Assist</h1>
-        <p class="lead">
-          A student support chatbot that helps answer common questions about courses, services, deadlines,
-          and campus resources—quickly and clearly.
-        </p>
+  <!-- Welcome -->
+<section class="section hero hero-banner" id="welcome">
+  <div class="hero-banner-slider">
+    <img class="hero-banner-slide active" src="assets/img/students-fall.jpg" alt="Students studying outdoors on campus" />
+    <img class="hero-banner-slide" src="assets/img/carleton-river.jpg" alt="Carleton campus by the river" />
+    <img class="hero-banner-slide" src="assets/img/carleton-1965.jpg" alt="Historic aerial view of Carleton University campus" />
 
-        <div class="cta-row">
-          <a class="btn" href="#chat">Try the chatbot</a>
-          <a class="btn btn-ghost" href="#who">Learn more</a>
-        </div>
+    <div class="hero-overlay"></div>
 
-        <div class="chips">
-          <span class="chip">Fast answers</span>
-          <span class="chip">Guidance</span>
-          <span class="chip">Links</span>
-          <span class="chip">Department contacts</span>
-        </div>
+    <div class="hero-banner-content">
+      <h1>Campus Assist</h1>
+      <p class="lead hero-lead">
+        A student support chatbot that helps answer common questions about courses, services, deadlines, and campus resources—quickly and clearly.
+      </p>
+
+      <div class="cta-row">
+        <a class="btn" href="#chat">Try the chatbot</a>
+        <a class="btn btn-ghost hero-ghost" href="#who">Learn more</a>
       </div>
-    </section>
+
+      <div class="chips">
+        <span class="chip">Fast answers</span>
+        <span class="chip">Guidance</span>
+        <span class="chip">Links</span>
+        <span class="chip">Department contacts</span>
+      </div>
+    </div>
+
+    <button type="button" class="hero-arrow hero-arrow-right" id="heroNext" aria-label="Next image">›</button>
+
+    <div class="hero-dots" id="heroDots">
+      <button type="button" class="hero-dot active" data-slide="0" aria-label="Go to slide 1"></button>
+      <button type="button" class="hero-dot" data-slide="1" aria-label="Go to slide 2"></button>
+      <button type="button" class="hero-dot" data-slide="2" aria-label="Go to slide 3"></button>
+    </div>
+  </div>
+</section>
 
     <!-- Who -->
     <section class="section" id="who">
@@ -125,11 +140,6 @@
             <p>If the bot isn’t confident, it suggests the correct human support path.</p>
           </article>
         </div>
-
-        <div class="note">
-          <strong>Tip:</strong>  put somthing thats the students should care about while asking questions here !!.
-        </div>
-      </div>
     </section>
 
     <!-- Chat -->
@@ -137,7 +147,7 @@
       <div class="container">
         <h2>Chatbot</h2>
         <p class="lead">
-          This is a demo UI. Later you can connect it later. I just put it here for a text box ...
+          Ask your questions here..
         </p>
 
         <div class="chat-shell" role="region" aria-label="Chat interface">
@@ -163,75 +173,81 @@
             <button class="btn" type="submit">Send</button>
           </form>
         </div>
-
-        <div class="embed-hint">
-          <details>
-            <summary>Add our live chatbot here in the code pls.. ?</summary>
-            <p>Replace the demo UI:</p>
-            <pre class="code"><code>&lt;iframe
-  title="Chatbot"
-  src="https://YOUR-CHATBOT-URL"
-  style="width:100%; height:650px; border:0; border-radius:16px;"
-&gt;&lt;/iframe&gt;</code></pre>
-          </details>
-        </div>
-      </div>
     </section>
 
-    <!-- FAQ -->
-    <section class="section" id="faq">
-      <div class="container">
-        <h2>FAQ</h2>
+<section class="section" id="faq">
+  <div class="container">
+    <h2>Quick Links</h2>
+    <p class="lead">Carleton resources for students.</p>
 
-        <div class="faq">
-          <details class="faq-item" open>
-            <summary>Is this official university advice?</summary>
-            <p>No — it’s a student project demo. The bot should point to official pages/offices when possible.</p>
-          </details>
+    <div class="grid quick-links-grid">
+      <article class="card quick-card">
+        <h3>Carleton Central</h3>
+        <p>Access registration, student records, documents, and other central student services.</p>
+        <a class="btn" href="https://central.carleton.ca/" target="_blank" rel="noreferrer">Open Carleton Central</a>
+      </article>
 
-          <details class="faq-item">
-            <summary>What happens if the bot is wrong?</summary>
-            <p>It should show confidence and recommend escalation paths when uncertain.</p>
-          </details>
+      <article class="card quick-card">
+        <h3>Housing Portal</h3>
+        <p>Apply to residence, manage residence information, and access housing resources.</p>
+        <a class="btn" href="https://housing.carleton.ca/" target="_blank" rel="noreferrer">Open Housing</a>
+      </article>
 
-          <details class="faq-item">
-            <summary>Does it store my data?</summary>
-            <p>disclose whatever data we are saving here //</p>
-          </details>
-        </div>
-      </div>
-    </section>
+      <article class="card quick-card">
+        <h3>Registrar’s Office</h3>
+        <p>Get help with registration, records, transcripts, and academic administration.</p>
+        <a class="btn" href="https://carleton.ca/registrar/" target="_blank" rel="noreferrer">Open Registrar</a>
+      </article>
 
-    <!-- Contact -->
-    <section class="section" id="contact">
-      <div class="container">
-        <h2>Get in touch</h2>
-        <p class="lead">Send feedback or report an issue with the demo. NOT FINISHED !!</p>
+      <article class="card quick-card">
+        <h3>Brightspace</h3>
+        <p>Access course content, assignments, announcements, and online learning tools.</p>
+        <a class="btn" href="https://brightspace.carleton.ca/d2l/home" target="_blank" rel="noreferrer">Open Brightspace</a>
+      </article>
 
-        <form class="contact" id="contactForm">
-          <div class="grid-2">
-            <div>
-              <label for="name">Name</label>
-              <input id="name" type="text" placeholder="Your name" />
-            </div>
-            <div>
-              <label for="email">Email</label>
-              <input id="email" type="email" placeholder="you@email.com" />
-            </div>
-          </div>
+      <article class="card quick-card">
+        <h3>Library</h3>
+        <p>Find books, articles, study spaces, research help, and academic support tools.</p>
+        <a class="btn" href="https://library.carleton.ca/" target="_blank" rel="noreferrer">Open Library</a>
+      </article>
 
-          <label for="message">Message</label>
-          <textarea id="message" rows="5" placeholder="Write your feedback…"></textarea>
+      <article class="card quick-card">
+        <h3>ITS Help</h3>
+        <p>Get support for passwords, accounts, Wi-Fi, and other university technology services.</p>
+        <a class="btn" href="https://carleton.ca/its/" target="_blank" rel="noreferrer">Open ITS</a>
+      </article>
 
-          <div class="cta-row">
-            <button class="btn" type="submit">Send message</button>
-            <button class="btn btn-ghost" type="reset">Reset</button>
-          </div>
+      <article class="card quick-card">
+        <h3>Awards & OSAP</h3>
+        <p>Explore financial aid, scholarships, bursaries, and OSAP-related information.</p>
+        <a class="btn" href="https://carleton.ca/awards/government-financial-aid/osap/" target="_blank" rel="noreferrer">Open Awards & OSAP</a>
+      </article>
 
-          <p class="tiny" id="contactNote" role="status" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
+      <article class="card quick-card">
+        <h3>Academic Advising</h3>
+        <p>Request advising support for academic planning, course decisions, and degree progress.</p>
+        <a class="btn" href="https://carleton.ca/academicadvising/aac-request-form/" target="_blank" rel="noreferrer">Open Advising</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+    <!-- more help -->
+<section class="section" id="contact">
+  <div class="container">
+    <h2>More Help</h2>
+    <p class="lead">Additional resources for students. </p>
+
+    <div class="more-help-links">
+      <a href="https://central.carleton.ca/" target="_blank" rel="noreferrer">Certificate of Enrolment / Carleton Central</a>
+      <a href="https://calendar.carleton.ca/academicyear/" target="_blank" rel="noreferrer">Academic Dates & Deadlines</a>
+      <a href="https://housing.carleton.ca/" target="_blank" rel="noreferrer">Residence & Housing</a>
+      <a href="https://carleton.ca/its/help-centre/accounts-and-passwords/" target="_blank" rel="noreferrer">MyCarletonOne Password Help</a>
+      <a href="https://athletics.carleton.ca/students/leagues-intramurals/" target="_blank" rel="noreferrer">Intramurals</a>
+      <a href="https://carleton.ca/studentaffairs/" target="_blank" rel="noreferrer">Student Affairs</a>
+    </div>
+  </div>
+</section>
 
     <!-- Carleton-style footer -->
     <footer class="cu-footer" aria-label="Footer">
