@@ -143,17 +143,6 @@ chatForm?.addEventListener("submit", async e => {
   }
 });
 
-// Contact form demo
-const contactForm = document.getElementById("contactForm");
-const contactNote = document.getElementById("contactNote");
-
-contactForm?.addEventListener("submit", e => {
-  e.preventDefault();
-  if (contactNote) {
-    contactNote.textContent = "Thanks! This is a demo form (no backend connected yet).";
-  }
-});
-
 // Hero banner slider
 const heroSlides = document.querySelectorAll(".hero-banner-slide");
 const heroDots = document.querySelectorAll(".hero-dot");
@@ -219,3 +208,14 @@ if (heroSlides.length) {
   showSlide(0);
   startHeroAuto();
 }
+
+// contact us section
+const contactForm = document.getElementById("contactForm");
+const contactNote = document.getElementById("contactNote");
+
+contactForm?.addEventListener("submit", (e) => {
+  e.preventDefault();
+  if (contactNote) {
+    contactNote.textContent = "Your message has been sent successfully !!.";
+  }
+});

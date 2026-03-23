@@ -34,7 +34,7 @@
       <a class="nav-link" href="#what">What we do</a>
       <a class="nav-link" href="#chat">Chatbot</a>
       <a class="nav-link" href="#faq">Quick Links</a>
-      <a class="nav-link" href="#contact">More Help</a>
+      <a class="nav-link" href="#contact">Contact Us</a>
     </nav>
 
     <div class="sidebar-footer">
@@ -232,20 +232,37 @@
   </div>
 </section>
 
-    <!-- more help -->
+    <!-- contact us -->
 <section class="section" id="contact">
   <div class="container">
-    <h2>More Help</h2>
-    <p class="lead">Additional resources for students. </p>
+    <h2>Contact Us</h2>
+    <p class="lead">Have a question, suggestion, or issue? Send us a message and our team will review it.</p>
 
-    <div class="more-help-links">
-      <a href="https://central.carleton.ca/" target="_blank" rel="noreferrer">Certificate of Enrolment / Carleton Central</a>
-      <a href="https://calendar.carleton.ca/academicyear/" target="_blank" rel="noreferrer">Academic Dates & Deadlines</a>
-      <a href="https://housing.carleton.ca/" target="_blank" rel="noreferrer">Residence & Housing</a>
-      <a href="https://carleton.ca/its/help-centre/accounts-and-passwords/" target="_blank" rel="noreferrer">MyCarletonOne Password Help</a>
-      <a href="https://athletics.carleton.ca/students/leagues-intramurals/" target="_blank" rel="noreferrer">Intramurals</a>
-      <a href="https://carleton.ca/studentaffairs/" target="_blank" rel="noreferrer">Student Affairs</a>
-    </div>
+    <form class="contact" id="contactForm">
+      <div class="grid-2">
+        <div>
+          <label for="contactName">Name</label>
+          <input id="contactName" type="text" placeholder="Your name" required />
+        </div>
+        <div>
+          <label for="contactEmail">Email</label>
+          <input id="contactEmail" type="email" placeholder="you@email.com" required />
+        </div>
+      </div>
+
+      <label for="contactSubject">Subject</label>
+      <input id="contactSubject" type="text" placeholder="Subject" required />
+
+      <label for="contactMessage">Message</label>
+      <textarea id="contactMessage" rows="6" placeholder="Write your message here..." required></textarea>
+
+      <div class="cta-row">
+        <button class="btn" type="submit">Send Message</button>
+        <button class="btn btn-ghost" type="reset">Reset</button>
+      </div>
+
+      <p class="tiny" id="contactNote"> email us your feeback we will get back to you soon.</p>
+    </form>
   </div>
 </section>
 
