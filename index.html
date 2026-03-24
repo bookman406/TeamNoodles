@@ -10,7 +10,7 @@
 
 <body>
   <!-- Mobile top bar -->
-  <header class="topbar" aria-label="Top navigation">
+    <header class="topbar" aria-label="Top navigation">
     <button class="icon-btn" id="menuBtn" aria-expanded="false" aria-controls="sidebar" aria-label="Open menu">
       ☰
     </button>
@@ -232,13 +232,13 @@
   </div>
 </section>
 
-    <!-- contact us -->
+<!-- contact us -->
 <section class="section" id="contact">
   <div class="container">
     <h2>Contact Us</h2>
     <p class="lead">Have a question, suggestion, or issue? Send us a message and our team will review it.</p>
 
-    <form class="contact" id="contactForm">
+    <form class="contact" id="contactForm" onsubmit="sendContactEmail(event)">
       <div class="grid-2">
         <div>
           <label for="contactName">Name</label>
@@ -261,10 +261,25 @@
         <button class="btn btn-ghost" type="reset">Reset</button>
       </div>
 
-      <p class="tiny" id="contactNote"> email us your feeback we will get back to you soon.</p>
+      <p class="tiny" id="contactNote">Your message will be sent to our team at TimMei@cmail.carleton.ca</p>
     </form>
   </div>
 </section>
+
+<script>
+function sendContactEmail(e) {
+  e.preventDefault();
+  const name    = document.getElementById("contactName").value;
+  const email   = document.getElementById("contactEmail").value;
+  const subject = document.getElementById("contactSubject").value;
+  const message = document.getElementById("contactMessage").value;
+
+  const body = `Name: ${name}\nEmail: ${email}\n\n${message}`;
+  const mailto = `mailto:TimMei@cmail.carleton.ca?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+
+  window.location.href = mailto;
+}
+</script>
 
     <!-- Carleton-style footer -->
     <footer class="cu-footer" aria-label="Footer">
