@@ -38,22 +38,27 @@ This project demonstrates a simple chatbot system using a static frontend interf
 
 
 ## Running the Project
+Prerequisites
+Make sure you have Python installed on your system.
 
-### Run the Backend
-TERMINAL: 
-cd backend
-python3 -m uvicorn main:app --reload --port 8001
+## Step 1: Install Dependencies
+Open a terminal and install the required packages:
+pip install uvicorn
+pip install fastapi
 
+## Step 2: Run the Backend
+Navigate to the backend folder:
+<< cd backend >>
+Start the FastAPI server:
+<< uvicorn main:app --reload --port 8001 >>
+Then open your browser and go to:
+<< http://127.0.0.1:8001/ >>
 
-### Run the Frontend
-TERMINAL:
-python3 -m http.server 5500
-
-
-Then open the website in a browser:
-
+## Step 3: Run the Frontend
+In a separate terminal, navigate to your frontend/root directory and run:
+<< python3 -m http.server 5500 >>
+Then open:
 http://127.0.0.1:5500
-
 ## Disclaimer
 
 This project was created by **Team Noodles** as part of the IRM3004/OSS3009 course project.
