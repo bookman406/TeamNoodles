@@ -8,8 +8,8 @@ from fastapi.responses import FileResponse
 app = FastAPI()
 
 origins = [
-    "http://localhost:5173",  # vite default port
-    "http://localhost:3000",  # react default port
+    "http://localhost:5173",  # Vite default port
+    "http://localhost:3000",  # React default port
     "http://localhost:8001"   # port used for this project
 ]
 
@@ -17,21 +17,21 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
     allow_credentials=True,
-    allow_methods=["*"],  # HTTP methods (GET, POST, etc)
-    allow_headers=["*"],  # request headers
+    allow_methods=["*"],  # allow all HTTP methods (GET, POST, etc)
+    allow_headers=["*"],  # allow all request headers
 )
 
-# simulate an API interface for calling JS
+# Simulate an API interface for calling JS
 @app.get("/api/data")
 async def get_data():
     return {"message": "This is data from FastAPI backend!"}
 
-# static folder so that web browser can access .js file
+# Mount static folder so that web browser can access .js file
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 assets_path = os.path.join(BASE_DIR, "assets")
 app.mount("/assets", StaticFiles(directory=assets_path), name="assets")
 
-# set route for first page, and return to index.html
+# Set route for first page, and return to index.html
 @app.get("/")
 async def read_index():
     index_path = os.path.join(BASE_DIR, "index.html")
@@ -40,7 +40,7 @@ async def read_index():
 class Question(BaseModel):
     message: str
 
-# Chat endpoint, matches user input to a topic and returns answer
+# Chat endpoint — matches user input to a topic and returns the appropriate answer
 @app.post("/chat")
 def chat(question: Question):
 
@@ -66,16 +66,24 @@ Things to keep in mind:
 Once everything is confirmed, you may move to the next step."""}
 
     if any(word in q for word in [
-        "tuition", "fees", "fee", "cost", "how much", "price", "pay", "expensive", "computer science",
+        "tuition", "fees", "fee", "cost", "how much", "price", "pay", "expensive", "engineering ", "Information Technology ", "Information Technology Fee ", 
         "how much is tuition", "how much does it cost", "what is the tuition",
         "what are the fees", "how much do i pay", "how much is carleton",
         "how much is the program", "what does carleton cost", "how much is first year",
         "how much is computer science", "what is the cost of"]):
-        return {"answer": """Tuition fees for first-year Computer Science students (Fall 2025 - Winter 2026):
+        return {"answer": """
+Full-fee Domestic Undergraduate Status
+(2.0 or more billing hours per term, Fall + Winter combined, UPASS included)
+Note: Compulsory miscellaneous fees are included in all quoted fees.
 
-- Ontario: $10,549.48
-- Rest of Canada: $12,633.62
-- International: $56,273.62"""}
+Bachelor of Engineering:
+- First Year:  $12,007.32 
+- Second Year: $11,996.58
+- Third Year:  $11,996.58
+- Fourth Year: $11,997.08
+
+For a full list of fees, visit:
+https://carleton.ca/studentaccounts/tuition-fees/"""}
 
     if any(word in q for word in [
         "residence", "res", "dorm", "housing", "live on campus", "room", "move in", "on campus",
