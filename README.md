@@ -65,6 +65,14 @@ In a separate terminal, navigate to your frontend/root directory and run:
 
 << python3 -m http.server 5500 >>
 
+
+## Contact Us Form
+The Contact Us page includes a form where users can submit their name, email, subject, and message.
+
+When the form is submitted, it opens the user's default email application (such as Outlook, Apple Mail, or Gmail desktop) with the message pre-filled and addressed to the team.
+
+> **Note:** This feature requires a default email application to be set up on your device. If no email app is configured, the form will not be able to send the message.  
+
 Then open:
 http://127.0.0.1:5500
 ## Disclaimer
