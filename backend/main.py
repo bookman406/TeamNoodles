@@ -203,7 +203,7 @@ More info:
 https://carleton.ca/its/help-centre/accounts-and-passwords/"""}
 
     # Default response if no topic matched
-    return {"answer": """I'm sorry, I didn't quite understand that. I can help you with questions about:
+    return {"answer": """I'm sorry, I didn't quite understand that. For an answer please enter one of the key words in regards to the topic you are interested in:
 
 - Course registration
 - Tuition fees
@@ -215,4 +215,4 @@ https://carleton.ca/its/help-centre/accounts-and-passwords/"""}
 - OSAP
 - MyCarletonOne passwords
 
-Try rephrasing your question and I'll do my best to help!"""}
+I'll do my best to help!"""}
